@@ -1,0 +1,224 @@
+```html
+<!DOCTYPE html>
+<html lang="en" style="scroll-behavior: smooth;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tesuria | Premium Business Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', 'Heebo', sans-serif;
+        background-color: #000000;
+        color: #D4AF37; /* Gold/Champagne color */
+      }
+      ::selection {
+        background: #D4AF37;
+        color: #000000;
+      }
+      [dir="rtl"] {
+        font-family: 'Heebo', 'Inter', sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="min-h-screen bg-black text-accent selection:bg-accent selection:text-black text-left" dir="ltr">
+      <!-- Minimized Navigation Bar -->
+      <nav class="fixed w-full z-40 px-6 py-4 flex justify-between items-center backdrop-blur-md bg-black/70 border-b border-accent/10">
+        <a href="#hero" class="text-xl font-bold tracking-[0.2em] uppercase text-accent hover:opacity-70 transition-opacity">
+          TESURIA
+        </a>
+        <div class="flex items-center space-x-6 rtl:space-x-reverse">
+          <button 
+            class="flex items-center space-x-2 rtl:space-x-reverse hover:opacity-100 opacity-60 transition-opacity border border-accent/20 px-3 py-1 rounded-sm"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span class="text-[10px] font-bold tracking-normal uppercase">HEB</span>
+          </button>
+        </div>
+      </nav>
+
+      <main class="pt-24">
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex flex-col justify-center px-6 md:px-24 relative overflow-hidden">
+          <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.05),transparent)]"></div>
+          <h1 class="text-7xl md:text-9xl font-bold uppercase tracking-[0.05em] leading-none mb-8 text-accent">
+            RESTORING<br>ARCHITECTURAL LEGACIES.
+          </h1>
+          <p class="text-xl md:text-2xl max-w-xl font-light leading-relaxed opacity-70 mb-16 text-accent/80">
+            Tesuria specializes in the meticulous renovation of heritage estates and luxury residences. Craftsmanship meet contemporary engineering.
+          </p>
+          <div class="flex flex-col md:flex-row items-start md:items-center space-y-8 md:space-y-0 md:space-x-8 rtl:space-x-reverse">
+            <a href="tel:+972505379800" class="inline-flex items-center px-12 py-6 bg-accent text-black font-bold uppercase tracking-[0.2em] text-sm hover:bg-white hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-xl">
+              Phone Call
+            </a>
+            <a href="#contact" class="inline-flex items-center space-x-3 rtl:space-x-reverse opacity-50 hover:opacity-100 transition-opacity text-accent">
+              <span class="text-sm uppercase tracking-[0.3em] font-medium">Inquire</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+            </a>
+          </div>
+          <a href="https://tesuria.com" class="mt-12 text-xs uppercase tracking-[0.3em] opacity-40 hover:opacity-80 transition-opacity flex items-center space-x-2">
+            <span>for more to see click here (to our website)</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 22 3 22 10"/><line x1="10" y1="14" x2="22" y2="2"/></svg>
+          </a>
+        </section>
+
+        <!-- Principals Section -->
+        <section id="principals" class="py-32 px-6 md:px-24 border-t border-accent/10">
+          <h2 class="text-xs uppercase tracking-[0.4em] mb-24 opacity-60 font-medium text-accent/80">The Master Builders</h2>
+          <div class="grid md:grid-cols-2 gap-24">
+            <div class="group">
+              <div class="aspect-square overflow-hidden mb-8 relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" 
+                  alt="Yossi Tesuria" 
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </div>
+              <h3 class="text-2xl font-bold mb-2 text-accent">Yossi Tesuria</h3>
+              <p class="text-lg opacity-70 mb-4 text-accent/80">Lead Restoration Engineer</p>
+              <p class="text-base font-light leading-relaxed opacity-60 text-accent/60">
+                A master craftsman with 20 years in structural restoration. Yossi specializes in stone-working and historical timber reinforcement.
+              </p>
+            </div>
+            <div class="group">
+              <div class="aspect-square overflow-hidden mb-8 relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop" 
+                  alt="Rafael Tesuria" 
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              </div>
+              <h3 class="text-2xl font-bold mb-2 text-accent">Rafael Tesuria</h3>
+              <p class="text-lg opacity-70 mb-4 text-accent/80">Principal Architect</p>
+              <p class="text-base font-light leading-relaxed opacity-60 text-accent/60">
+                A graduate of the Architectural Association, Rafael fuses heritage aesthetics with modern smart-home functionality.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Expertise Section -->
+        <section id="expertise" class="py-32 px-6 md:px-24 border-t border-accent/10 bg-[linear-gradient(to_bottom,rgba(212,175,55,0.02),transparent)]">
+          <h2 class="text-xs uppercase tracking-[0.4em] mb-24 opacity-60 font-medium text-accent/80">Our Crafts</h2>
+          <div class="grid md:grid-cols-3 gap-16">
+            <div class="border border-accent/10 p-12 hover:border-accent/30 transition-colors">
+              <h3 class="text-xl font-bold mb-4 text-accent">Heritage Restoration</h3>
+              <p class="text-base font-light opacity-60 leading-relaxed text-accent/60">
+                Meticulous preservation of period details and historical structural elements.
+              </p>
+            </div>
+            <div class="border border-accent/10 p-12 hover:border-accent/30 transition-colors">
+              <h3 class="text-xl font-bold mb-4 text-accent">Bespoke Renovation</h3>
+              <p class="text-base font-light opacity-60 leading-relaxed text-accent/60">
+                Transforming luxury residences with custom interiors and premium finishes.
+              </p>
+            </div>
+            <div class="border border-accent/10 p-12 hover:border-accent/30 transition-colors">
+              <h3 class="text-xl font-bold mb-4 text-accent">Modern Integration</h3>
+              <p class="text-base font-light opacity-60 leading-relaxed text-accent/60">
+                Upgrading classical structures with cutting-edge HVAC, lighting, and tech.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-32 px-6 md:px-24 border-t border-accent/10">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold uppercase tracking-[0.05em] mb-8 text-accent">Consign Your Details</h2>
+            <p class="text-xl font-light leading-relaxed opacity-70 mb-24 max-w-2xl text-accent/80">
+              Register your interest below. Yossi and Rafael will personally review your information to craft a bespoke deal offer for your project.
+            </p>
+            
+            <form class="space-y-0">
+              <div class="border border-accent/10 overflow-hidden">
+                <table class="w-full border-collapse">
+                  <tbody>
+                    <tr class="border-b border-accent/10">
+                      <td class="w-1/2 p-0 border-r border-accent/10">
+                        <div class="p-8">
+                          <label class="block text-xs uppercase tracking-[0.3em] text-accent/60 mb-4 font-medium">Client Full Name</label>
+                          <input 
+                            type="text" 
+                            required
+                            class="w-full bg-transparent focus:outline-none focus:bg-accent/10 transition-all text-xl md:text-2xl text-accent placeholder-accent/10 font-light"
+                            placeholder="John Doe"
+                          />
+                        </div>
+                      </td>
+                      <td class="p-0">
+                        <div class="p-8">
+                          <label class="block text-xs uppercase tracking-[0.3em] text-accent/60 mb-4 font-medium">Direct Telephone</label>
+                          <input 
+                            type="tel" 
+                            required
+                            class="w-full bg-transparent focus:outline-none focus:bg-accent/10 transition-all text-xl md:text-2xl text-accent placeholder-accent/10 font-light"
+                            placeholder="+972-50-000-0000"
+                          />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2" class="p-0">
+                        <div class="p-8 border-b border-accent/10">
+                          <label class="block text-xs uppercase tracking-[0.3em] text-accent/60 mb-4 font-medium">Message</label>
+                          <textarea 
+                            class="w-full bg-transparent focus:outline-none transition-all text-lg text-accent placeholder-accent/10 font-light min-h-[120px] resize-none"
+                            placeholder="Describe your project here..."
+                          ></textarea>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+              <div class="mt-12 flex flex-col md:flex-row items-center justify-between gap-8">
+                <div class="text-xs uppercase tracking-[0.2em] opacity-40 italic">
+                  * All details are handled with absolute discretion by Yossi and Rafael personally.
+                </div>
+                <button 
+                  type="submit"
+                  class="w-full md:w-auto px-16 py-6 bg-accent text-black font-bold uppercase tracking-[0.2em] text-sm hover:bg-white hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-xl"
+                >
+                  Get Deal Offer
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-24 px-6 md:px-24 border-t border-accent/10 bg-black">
+          <div class="flex flex-col md:flex-row justify-between items-start md:items-end space-y-12 md:space-y-0">
+            <div>
+              <h2 class="text-2xl font-bold mb-8 uppercase tracking-[0.3em] text-accent">
+                TESURIA
+              </h2>
+              <div class="space-y-3 opacity-60 text-sm tracking-widest text-accent/80">
+                <p>Head Office: Ezorei Hen, Tel Aviv</p>
+                <p class="hover:text-accent transition-colors cursor-pointer">mail@tesuria.com</p>
+                <div class="pt-2 flex flex-col space-y-1">
+                  <p class="hover:text-accent transition-colors cursor-pointer">Rafael: 050-537-9800</p>
+                  <p class="hover:text-accent transition-colors cursor-pointer">Yossi: 054-582-0425</p>
+                </div>
+              </div>
+            </div>
+            <div class="text-xs tracking-[0.3em] uppercase opacity-30 text-accent/60">
+              © 2025 Tesuria Partners. All rights reserved.
+            </div>
+          </div>
+        </footer>
+      </main>
+
+      <!-- Note: ChatBot component omitted as it requires dynamic JavaScript and API integration -->
+    </div>
+  </body>
+</html>
+```
