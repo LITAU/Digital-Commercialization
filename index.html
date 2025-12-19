@@ -24,9 +24,9 @@
     </style>
   </head>
   <body>
-    <div id="app" class="min-h-screen bg-black text-[#D4AF37] selection:bg-[#D4AF37] selection:text-black text-left" dir="ltr">
+    <div id="app" class="min-h-screen bg-black text-[#D4AF37] selection:bg-[#D4AF37] selection:text-black text-start" dir="ltr">
       <!-- Navigation -->
-      <nav class="fixed w-full z-40 px-6 py-4 flex justify-between items-center backdrop-blur-md bg-black/70 border-b border-[#D4AF37]/10">
+      <nav class="fixed inset-x-0 top-0 z-40 px-6 py-4 flex justify-between items-center backdrop-blur-md bg-black/70 border-b border-[#D4AF37]/10">
         <a href="#hero" id="logo" class="text-xl font-bold tracking-[0.2em] uppercase text-[#D4AF37] hover:opacity-70 transition-opacity">
           TESURIA
         </a>
@@ -131,7 +131,7 @@
                 <table class="w-full border-collapse">
                   <tbody>
                     <tr class="border-b border-[#D4AF37]/10">
-                      <td class="w-1/2 p-0 border-r border-[#D4AF37]/10">
+                      <td class="w-full md:w-1/2 p-0 md:border-r border-[#D4AF37]/10">
                         <div class="p-8">
                           <label id="label-name" class="block text-xs uppercase tracking-[0.3em] text-[#D4AF37]/60 mb-4 font-medium">Client Full Name</label>
                           <input 
@@ -143,7 +143,7 @@
                           />
                         </div>
                       </td>
-                      <td class="p-0">
+                      <td class="w-full md:w-1/2 p-0">
                         <div class="p-8">
                           <label id="label-phone" class="block text-xs uppercase tracking-[0.3em] text-[#D4AF37]/60 mb-4 font-medium">Direct Telephone</label>
                           <input 
@@ -212,7 +212,7 @@
     </div>
 
     <script>
-      // All translations and data
+      // All translations and data (unchanged from before)
       const TRANSLATIONS = {
         en: {
           hero: { 
