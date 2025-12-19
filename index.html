@@ -7,24 +7,47 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
       body {
         font-family: 'Inter', 'Heebo', sans-serif;
         background-color: #000000;
-        color: #D4AF37; /* Gold/Champagne color */
+        color: #D4AF37;
       }
       ::selection {
         background: #D4AF37;
         color: #000000;
       }
+      /* Comprehensive RTL fixes */
       [dir="rtl"] {
-        font-family: 'Heebo', 'Inter', sans-serif;
+        text-align: right;
       }
+      [dir="rtl"] .text-left { text-align: right !important; }
+      [dir="rtl"] .text-right { text-align: left !important; }
+      [dir="rtl"] .justify-start { justify-content: flex-end !important; }
+      [dir="rtl"] .justify-end { justify-content: flex-start !important; }
+      [dir="rtl"] .justify-between { justify-content: space-between !important; } /* preserves balance */
+      [dir="rtl"] .items-start { align-items: flex-end !important; }
+      [dir="rtl"] .items-end { align-items: flex-start !important; }
+      /* Reverse horizontal spacing for RTL */
+      [dir="rtl"] .space-x-2 > :not([hidden]) ~ :not([hidden]) { margin-left: var(--tw-space-x-reverse) * 0.5rem; margin-right: calc(0.5rem * calc(1 - var(--tw-space-x-reverse))); --tw-space-x-reverse: 1; }
+      [dir="rtl"] .space-x-3 > :not([hidden]) ~ :not([hidden]) { --tw-space-x-reverse: 1; }
+      [dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) { --tw-space-x-reverse: 1; }
+      [dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) { --tw-space-x-reverse: 1; }
+      [dir="rtl"] .md\\:space-x-8 > :not([hidden]) ~ :not([hidden]) { --tw-space-x-reverse: 1; }
+      /* Grid column flow */
+      [dir="rtl"] .grid { direction: rtl; }
+      /* Better line height and spacing for Hebrew */
+      [dir="rtl"] p, [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] label, [dir="rtl"] span {
+        line-height: 1.7;
+        letter-spacing: 0.3px;
+      }
+      /* Hero description width adjustment */
+      [dir="rtl"] .max-w-xl { max-width: 80%; }
     </style>
   </head>
   <body>
-    <div id="app" class="min-h-screen bg-black text-[#D4AF37] selection:bg-[#D4AF37] selection:text-black text-left" dir="ltr">
+    <div id="app" class="min-h-screen bg-black text-[#D4AF37] selection:bg-[#D4AF37] selection:text-black" dir="ltr">
       <!-- Navigation -->
       <nav class="fixed w-full z-40 px-6 py-4 flex justify-between items-center backdrop-blur-md bg-black/70 border-b border-[#D4AF37]/10">
         <a href="#hero" id="logo" class="text-xl font-bold tracking-[0.2em] uppercase text-[#D4AF37] hover:opacity-70 transition-opacity">
@@ -212,53 +235,20 @@
     </div>
 
     <script>
-      // All translations and data
       const TRANSLATIONS = {
         en: {
-          hero: { 
-            title: "RESTORING", 
-            subtitle: "ARCHITECTURAL LEGACIES.", 
-            desc: "Tesuria specializes in the meticulous renovation of heritage estates and luxury residences. Craftsmanship meets contemporary engineering.", 
-            cta: "Phone Call",
-            websiteLink: "for more to see click here (to our website)"
-          },
+          hero: { title: "RESTORING", subtitle: "ARCHITECTURAL LEGACIES.", desc: "Tesuria specializes in the meticulous renovation of heritage estates and luxury residences. Craftsmanship meets contemporary engineering.", cta: "Phone Call", websiteLink: "for more to see click here (to our website)" },
           principals: { label: "The Master Builders" },
           expertise: { label: "Our Crafts" },
-          contact: { 
-            title: "Consign Your Details", 
-            desc: "Register your interest below. Yossi and Rafael will personally review your information to craft a bespoke deal offer for your project.",
-            name: "Client Full Name",
-            phone: "Direct Telephone",
-            message: "Message",
-            submit: "Get Deal Offer"
-          },
-          footer: { 
-            offices: "Head Office: Ezorei Hen, Tel Aviv", 
-            rights: "All rights reserved."
-          }
+          contact: { title: "Consign Your Details", desc: "Register your interest below. Yossi and Rafael will personally review your information to craft a bespoke deal offer for your project.", name: "Client Full Name", phone: "Direct Telephone", message: "Message", submit: "Get Deal Offer" },
+          footer: { offices: "Head Office: Ezorei Hen, Tel Aviv", rights: "All rights reserved." }
         },
         he: {
-          hero: { 
-            title: "משחזרים", 
-            subtitle: "מורשת ארכיטקטונית.", 
-            desc: "טסוריה מתמחה בשיפוץ קפדני של אחוזות היסטוריות ומגורי יוקרה. אומנות פוגשת הנדסה בת זמננו.", 
-            cta: "שיחת טלפון",
-            websiteLink: "לצפייה בפרטים נוספים לחצו כאן (לאתר שלנו)"
-          },
+          hero: { title: "משחזרים", subtitle: "מורשת ארכיטקטונית.", desc: "טסוריה מתמחה בשיפוץ קפדני של אחוזות היסטוריות ומגורי יוקרה. אומנות פוגשת הנדסה בת זמננו.", cta: "שיחת טלפון", websiteLink: "לצפייה בפרטים נוספים לחצו כאן (לאתר שלנו)" },
           principals: { label: "בוני המופת" },
           expertise: { label: "המומחיות שלנו" },
-          contact: { 
-            title: "רישום פרטי התקשרות", 
-            desc: "הפקידו את פרטיכם כאן. יוסי ורפאל יבחנו אישית את פנייתכם ויגבשו עבורכם הצעת עסקה ייחודית לפרויקט.",
-            name: "שם לקוח מלא",
-            phone: "טלפון ישיר",
-            message: "הודעה",
-            submit: "קבל הצעת מחיר"
-          },
-          footer: { 
-            offices: "משרד ראשי: אזורי חן, תל אביב", 
-            rights: "כל הזכויות שמורות."
-          }
+          contact: { title: "רישום פרטי התקשרות", desc: "הפקידו את פרטיכם כאן. יוסי ורפאל יבחנו אישית את פנייתכם ויגבשו עבורכם הצעת עסקה ייחודית לפרויקט.", name: "שם לקוח מלא", phone: "טלפון ישיר", message: "הודעה", submit: "קבל הצעת מחיר" },
+          footer: { offices: "משרד ראשי: אזורי חן, תל אביב", rights: "כל הזכויות שמורות." }
         }
       };
 
@@ -297,11 +287,11 @@
 
         const t = TRANSLATIONS[currentLang];
 
-        // Logo
+        // Logo & Footer Logo
         document.getElementById('logo').textContent = currentLang === 'he' ? 'טסוריה' : 'TESURIA';
         document.getElementById('footer-logo').textContent = currentLang === 'he' ? 'טסוריה' : 'TESURIA';
 
-        // Language button label
+        // Language button
         document.getElementById('lang-label').textContent = currentLang === 'en' ? 'HEB' : 'ENG';
 
         // Hero
