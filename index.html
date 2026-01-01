@@ -74,14 +74,14 @@
           <p id="hero-desc" class="text-xl md:text-2xl max-w-xl font-light leading-relaxed opacity-70 mb-16 text-[#D4AF37]/80">
             Tesuria specializes in the meticulous renovation of heritage estates and luxury residences. Craftsmanship meets contemporary engineering.
           </p>
-          <div class="flex flex-col md:flex-row items-start md:items-center space-y-8 md:space-y-0 md:space-x-8">
-            <a href="tel:+972505379800" id="hero-cta" class="inline-flex items-center px-12 py-6 bg-[#D4AF37] text-black font-bold uppercase tracking-[0.2em] text-sm hover:bg-white hover:scale-[1.02] active:scale-[0.98] transition-all duration-300 shadow-xl">
+         <!-- Hero CTA Section - Improved -->
+          <div class="flex flex-col md:flex-row items-start md:items-center gap-8 mb-12">
+            <!-- Main "Phone Call" / "שיחת טלפון" Button -->
+            <button id="contact-btn" 
+              onclick="window.scrollTo({top: document.getElementById('contact-section').offsetTop - 80, behavior: 'smooth'})"
+              class="px-16 py-8 bg-[#D4AF37] text-black font-bold uppercase tracking-[0.3em] text-lg hover:bg-white hover:scale-[1.03] active:scale-[0.98] transition-all duration-400 shadow-2xl">
               Phone Call
-            </a>
-            <a href="#contact" class="inline-flex items-center space-x-3 opacity-50 hover:opacity-100 transition-opacity text-[#D4AF37]">
-              <span class="text-sm uppercase tracking-[0.3em] font-medium">Inquire</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
-            </a>
+            </button>
           </div>
           <a href="https://tesuria.com" id="hero-website-link" class="mt-12 text-xs uppercase tracking-[0.3em] opacity-40 hover:opacity-80 transition-opacity flex items-center space-x-2">
             <span>for more to see click here (to our website)</span>
