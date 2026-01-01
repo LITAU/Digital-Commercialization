@@ -17,7 +17,7 @@
     [dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) { --tw-space-x-reverse: 1; }
     [dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) { --tw-space-x-reverse: 1; }
     [dir="rtl"] .grid { direction: rtl; }
-    [dir="rtl"] p, [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3 { line-height: 1.7; }
+    [dir="rtl"] p, [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] label { line-height: 1.7; }
   </style>
 </head>
 <body>
@@ -40,10 +40,16 @@
         <p id="hero-desc" class="text-lg md:text-xl max-w-2xl opacity-80 mb-12">
           Premium heritage restoration and luxury renovations. Craftsmanship meets modern engineering.
         </p>
-        <button id="contact-btn" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'})"
-                class="px-12 py-6 bg-[#D4AF37] text-black font-bold uppercase tracking-wider hover:bg-white transition shadow-xl">
-          Contact Us
-        </button>
+        <div class="flex flex-col md:flex-row items-start md:items-center gap-8 mb-12">
+          <button id="contact-btn" onclick="window.scrollTo({top: document.getElementById('contact-section').offsetTop - 80, behavior: 'smooth'})"
+                  class="px-12 py-6 bg-[#D4AF37] text-black font-bold uppercase tracking-wider hover:bg-white transition shadow-xl">
+            Get Deal Offer
+          </button>
+          <a id="website-link" href="https://tesuria.com" target="_blank" class="flex items-center gap-2 opacity-60 hover:opacity-100 transition text-sm uppercase tracking-widest">
+            <span id="website-text">Visit our full website</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 22 3 22 10"/><line x1="10" y1="14" x2="22" y2="2"/></svg>
+          </a>
+        </div>
       </section>
 
       <!-- Principals -->
@@ -84,7 +90,35 @@
         </div>
       </section>
 
-      <!-- Footer with Phone Numbers -->
+      <!-- Contact Form Section -->
+      <section id="contact-section" class="py-20 px-8 md:px-24 border-t border-[#D4AF37]/10">
+        <h2 id="contact-title" class="text-3xl font-bold uppercase tracking-widest mb-8">Consign Your Details</h2>
+        <p id="contact-desc" class="text-lg opacity-80 mb-12 max-w-2xl">
+          Leave your contact information below. Yossi and Rafael will personally review it and prepare a bespoke offer for your project.
+        </p>
+        <form id="contact-form" class="max-w-2xl">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <label id="label-name" class="block text-sm uppercase tracking-widest opacity-60 mb-2">Full Name</label>
+              <input type="text" required class="w-full bg-transparent border-b border-[#D4AF37]/30 focus:border-[#D4AF37] py-3 focus:outline-none text-xl" placeholder="John Doe" />
+            </div>
+            <div>
+              <label id="label-phone" class="block text-sm uppercase tracking-widest opacity-60 mb-2">Telephone</label>
+              <input type="tel" required class="w-full bg-transparent border-b border-[#D4AF37]/30 focus:border-[#D4AF37] py-3 focus:outline-none text-xl" placeholder="+972-50-000-0000" />
+            </div>
+          </div>
+          <div class="mb-12">
+            <label id="label-message" class="block text-sm uppercase tracking-widest opacity-60 mb-2">Project Description (optional)</label>
+            <textarea rows="4" class="w-full bg-transparent border border-[#D4AF37]/20 focus:border-[#D4AF37] p-6 focus:outline-none resize-none"></textarea>
+          </div>
+          <button type="submit" id="submit-btn" class="px-16 py-6 bg-[#D4AF37] text-black font-bold uppercase tracking-widest hover:bg-white transition shadow-xl">
+            Submit Request
+          </button>
+          <p id="success-msg" class="mt-8 text-lg opacity-0 transition-opacity">Thank you. We will contact you shortly with your personalized offer.</p>
+        </form>
+      </section>
+
+      <!-- Footer -->
       <footer class="py-20 px-8 md:px-24 border-t border-[#D4AF37]/10 text-center md:text-left">
         <h2 id="footer-logo" class="text-3xl font-bold tracking-widest mb-8">TESURIA</h2>
         <div class="space-y-4 text-lg">
@@ -104,7 +138,8 @@
         langLabel: "HEB",
         heroTitle: "RESTORING<br>ARCHITECTURAL<br>LEGACIES.",
         heroDesc: "Premium heritage restoration and luxury renovations. Craftsmanship meets modern engineering.",
-        contactBtn: "Contact Us",
+        contactBtn: "Get Deal Offer",
+        websiteText: "Visit our full website",
         principalsLabel: "The Master Builders",
         owner1: { name: "Yossi Tesuria", role: "Lead Restoration Engineer", bio: "Master craftsman with 20 years in stonework and historical timber reinforcement." },
         owner2: { name: "Rafael Tesuria", role: "Principal Architect", bio: "Blends heritage aesthetics with cutting-edge smart home integration." },
@@ -112,6 +147,13 @@
         service1: { title: "Heritage Restoration", desc: "Preservation of historical details and structural integrity." },
         service2: { title: "Bespoke Renovation", desc: "Luxury custom interiors and premium finishes." },
         service3: { title: "Modern Integration", desc: "Smart systems, HVAC, lighting, and technology upgrades." },
+        contactTitle: "Consign Your Details",
+        contactDesc: "Leave your contact information below. Yossi and Rafael will personally review it and prepare a bespoke offer for your project.",
+        labelName: "Full Name",
+        labelPhone: "Telephone",
+        labelMessage: "Project Description (optional)",
+        submitBtn: "Submit Request",
+        successMsg: "Thank you. We will contact you shortly with your personalized offer.",
         footerLogo: "TESURIA",
         rafael: "Rafael Tesuria: ",
         yossi: "Yossi Tesuria: ",
@@ -123,7 +165,8 @@
         langLabel: "ENG",
         heroTitle: "משחזרים<br>מורשת<br>ארכיטקטונית.",
         heroDesc: "שחזור מורשת פרימיום ושיפוץ מגורי יוקרה. אומנות פוגשת הנדסה מודרנית.",
-        contactBtn: "צור קשר",
+        contactBtn: "קבל הצעת מחיר",
+        websiteText: "בקרו באתר המלא שלנו",
         principalsLabel: "בוני המופת",
         owner1: { name: "יוסי טסוריה", role: "מהנדס שחזור ראשי", bio: "אומן מומחה בעבודות אבן וחיזוק קורות עץ היסטוריות." },
         owner2: { name: "רפאל טסוריה", role: "אדריכל ראשי", bio: "משלב אסתטיקה מסורתית עם מערכות בית חכם מתקדמות." },
@@ -131,6 +174,13 @@
         service1: { title: "שחזור מורשת", desc: "שימור קפדני של פרטים היסטוריים ומבנים." },
         service2: { title: "שיפוץ יוקרתי", desc: "עיצוב פנים מותאם וגימורים ברמה הגבוהה." },
         service3: { title: "שילוב מערכות מודרניות", desc: "מיזוג, תאורה וטכנולוגיה חכמה." },
+        contactTitle: "הפקדת פרטי התקשרות",
+        contactDesc: "השאירו את פרטיכם כאן. יוסי ורפאל יבחנו אותם אישית ויגבשו הצעה מותאמת לפרויקט שלכם.",
+        labelName: "שם מלא",
+        labelPhone: "טלפון",
+        labelMessage: "תיאור הפרויקט (אופציונלי)",
+        submitBtn: "שלח בקשה",
+        successMsg: "תודה רבה. נחזור אליכם בקרוב עם הצעה מותאמת אישית.",
         footerLogo: "טסוריה",
         rafael: "רפאל טסוריה: ",
         yossi: "יוסי טסוריה: ",
@@ -154,6 +204,7 @@
       document.getElementById('hero-title').innerHTML = t.heroTitle;
       document.getElementById('hero-desc').textContent = t.heroDesc;
       document.getElementById('contact-btn').textContent = t.contactBtn;
+      document.getElementById('website-text').textContent = t.websiteText;
       document.getElementById('principals-label').textContent = t.principalsLabel;
       document.getElementById('owner1-name').textContent = t.owner1.name;
       document.getElementById('owner1-role').textContent = t.owner1.role;
@@ -168,11 +219,26 @@
       document.getElementById('service2-desc').textContent = t.service2.desc;
       document.getElementById('service3-title').textContent = t.service3.title;
       document.getElementById('service3-desc').textContent = t.service3.desc;
+      document.getElementById('contact-title').textContent = t.contactTitle;
+      document.getElementById('contact-desc').textContent = t.contactDesc;
+      document.getElementById('label-name').textContent = t.labelName;
+      document.getElementById('label-phone').textContent = t.labelPhone;
+      document.getElementById('label-message').textContent = t.labelMessage;
+      document.getElementById('submit-btn').textContent = t.submitBtn;
+      document.getElementById('success-msg').textContent = t.successMsg;
       document.getElementById('footer-logo').textContent = t.footerLogo;
       document.getElementById('rafael-line').innerHTML = t.rafael + '<a href="tel:+972505379800" class="underline hover:opacity-70">050-537-9800</a>';
       document.getElementById('yossi-line').innerHTML = t.yossi + '<a href="tel:+972545820425" class="underline hover:opacity-70">054-582-0425</a>';
       document.getElementById('office-line').textContent = t.office;
       document.getElementById('copyright').textContent = t.copyright;
+    });
+
+    // Simple form success message
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('success-msg').classList.remove('opacity-0');
+      this.reset();
+      setTimeout(() => document.getElementById('success-msg').classList.add('opacity-0'), 6000);
     });
   </script>
 </body>
