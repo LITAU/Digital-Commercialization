@@ -1,136 +1,245 @@
 <!DOCTYPE html>
-<html lang="en" style="scroll-behavior: smooth;">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tesuria | Premium Business Solutions</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Heebo:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Inter', 'Heebo', sans-serif;
-        background-color: #000000;
-        color: #D4AF37;
-      }
-      ::selection {
-        background: #D4AF37;
-        color: #000000;
-      }
-      /* RTL fixes */
-      [dir="rtl"] { text-align: right; }
-      [dir="rtl"] .text-left { text-align: right !important; }
-      [dir="rtl"] .text-right { text-align: left !important; }
-      [dir="rtl"] .justify-start { justify-content: flex-end !important; }
-      [dir="rtl"] .justify-end { justify-content: flex-start !important; }
-      [dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) { --tw-space-x-reverse: 1; }
-      [dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) { --tw-space-x-reverse: 1; }
-      [dir="rtl"] .grid { direction: rtl; }
-      [dir="rtl"] p, [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] label, [dir="rtl"] span {
-        line-height: 1.7;
-        letter-spacing: 0.3px;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="app" class="min-h-screen bg-black text-[#D4AF37]" dir="ltr">
-      <!-- Navigation -->
-      <nav class="fixed w-full z-40 px-6 py-4 flex justify-between items-center backdrop-blur-md bg-black/70 border-b border-[#D4AF37]/10">
-        <a href="#hero" id="logo" class="text-xl font-bold tracking-[0.2em] uppercase hover:opacity-70 transition-opacity">
-          TESURIA
-        </a>
-        <button id="lang-button" class="flex items-center gap-2 border border-[#D4AF37]/20 px-3 py-1 rounded-sm hover:opacity-100 opacity-60 transition">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-          <span id="lang-label" class="text-[10px] font-bold uppercase">HEB</span>
-        </button>
-      </nav>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tesuria | Premium Restoration</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Heebo:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body { background: #000; color: #D4AF37; }
+    ::selection { background: #D4AF37; color: #000; }
+    [dir="rtl"] { font-family: 'Heebo', sans-serif; }
+    [dir="rtl"] .text-left { text-align: right !important; }
+    [dir="rtl"] .text-right { text-align: left !important; }
+    [dir="rtl"] .justify-start { justify-content: flex-end !important; }
+    [dir="rtl"] .justify-end { justify-content: flex-start !important; }
+    [dir="rtl"] .space-x-6 > :not([hidden]) ~ :not([hidden]) { --tw-space-x-reverse: 1; }
+    [dir="rtl"] .space-x-8 > :not([hidden]) ~ :not([hidden]) { --tw-space-x-reverse: 1; }
+    [dir="rtl"] .grid { direction: rtl; }
+    [dir="rtl"] p, [dir="rtl"] h1, [dir="rtl"] h2, [dir="rtl"] h3, [dir="rtl"] label { line-height: 1.7; }
+  </style>
+</head>
+<body>
+  <div id="app" class="min-h-screen" dir="ltr">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center bg-black/70 backdrop-blur border-b border-[#D4AF37]/10">
+      <div id="logo" class="text-2xl font-bold tracking-widest uppercase">TESURIA</div>
+      <button id="lang-btn" class="flex items-center gap-2 border border-[#D4AF37]/30 px-4 py-2 rounded hover:opacity-80 transition">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span id="lang-label" class="text-xs font-bold uppercase">HEB</span>
+      </button>
+    </nav>
 
-      <main class="pt-24">
-        <!-- Hero Section -->
-        <section id="hero" class="min-h-screen flex flex-col justify-center px-6 md:px-24 relative overflow-hidden">
-          <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(212,175,55,0.05),transparent)]"></div>
-          <h1 id="hero-title" class="text-7xl md:text-9xl font-bold uppercase tracking-[0.05em] leading-none mb-8">
-            RESTORING<br>ARCHITECTURAL LEGACIES.
-          </h1>
-          <p id="hero-desc" class="text-xl md:text-2xl max-w-xl font-light leading-relaxed opacity-70 mb-16 text-[#D4AF37]/80">
-            Tesuria specializes in the meticulous renovation of heritage estates and luxury residences. Craftsmanship meets contemporary engineering.
-          </p>
-
-          <!-- Perfect CTA matching your screenshot and live site -->
-          <div class="flex flex-col md:flex-row items-start md:items-center gap-12">
-            <!-- Gold "Phone Call" button – scrolls to contact form -->
-            <button id="contact-btn"
-                    onclick="window.scrollTo({top: document.getElementById('contact').offsetTop - 80, behavior: 'smooth'})"
-                    class="px-16 py-8 bg-[#D4AF37] text-black font-bold uppercase tracking-[0.4em] text-lg hover:bg-white hover:scale-105 active:scale-95 transition-all duration-300 shadow-2xl">
-              Phone Call
-            </button>
-
-            <!-- Subtle "Inquire →" link – goes to full website -->
-            <a id="inquire-link" href="https://tesuria.com" target="_blank"
-               class="flex items-center gap-4 opacity-60 hover:opacity-100 transition text-lg uppercase tracking-[0.4em]">
-              <span id="inquire-text">Inquire</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
-            </a>
-          </div>
-
-          <!-- Small website hint (kept from original) -->
-          <a id="hero-website-link" href="https://tesuria.com" target="_blank"
-             class="mt-20 text-xs uppercase tracking-[0.3em] opacity-40 hover:opacity-80 transition-opacity">
-            <span id="website-hint">for more to see click here (to our website)</span>
+    <main class="pt-20">
+      <!-- Hero -->
+      <section class="min-h-screen flex flex-col justify-center items-start px-8 md:px-24">
+        <h1 id="hero-title" class="text-6xl md:text-8xl font-bold uppercase leading-tight mb-8">
+          RESTORING<br>ARCHITECTURAL<br>LEGACIES.
+        </h1>
+        <p id="hero-desc" class="text-lg md:text-xl max-w-2xl opacity-80 mb-12">
+          Premium heritage restoration and luxury renovations. Craftsmanship meets modern engineering.
+        </p>
+        <div class="flex flex-col md:flex-row items-start md:items-center gap-8 mb-12">
+          <button id="contact-btn" onclick="window.scrollTo({top: document.getElementById('contact-section').offsetTop - 80, behavior: 'smooth'})"
+                  class="px-12 py-6 bg-[#D4AF37] text-black font-bold uppercase tracking-wider hover:bg-white transition shadow-xl">
+            Get Deal Offer
+          </button>
+          <a id="website-link" href="https://tesuria.com" target="_blank" class="flex items-center gap-2 opacity-60 hover:opacity-100 transition text-sm uppercase tracking-widest">
+            <span id="website-text">Visit our full website</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 22 3 22 10"/><line x1="10" y1="14" x2="22" y2="2"/></svg>
           </a>
-        </section>
+        </div>
+      </section>
 
-        <!-- Rest of sections unchanged (Principals, Expertise, Contact Form, Footer) -->
-        <!-- ... (same as your provided code) ... -->
+      <!-- Principals -->
+      <section class="py-20 px-8 md:px-24 border-t border-[#D4AF37]/10">
+        <h2 id="principals-label" class="text-sm uppercase tracking-widest opacity-60 mb-12">The Master Builders</h2>
+        <div class="grid md:grid-cols-2 gap-16">
+          <div>
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" alt="Yossi Tesuria" class="w-full aspect-square object-cover grayscale hover:grayscale-0 transition mb-6" />
+            <h3 id="owner1-name" class="text-2xl font-bold">Yossi Tesuria</h3>
+            <p id="owner1-role" class="opacity-70">Lead Restoration Engineer</p>
+            <p id="owner1-bio" class="mt-4 opacity-60 text-sm">Master craftsman with 20 years in stonework and historical timber reinforcement.</p>
+          </div>
+          <div>
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop" alt="Rafael Tesuria" class="w-full aspect-square object-cover grayscale hover:grayscale-0 transition mb-6" />
+            <h3 id="owner2-name" class="text-2xl font-bold">Rafael Tesuria</h3>
+            <p id="owner2-role" class="opacity-70">Principal Architect</p>
+            <p id="owner2-bio" class="mt-4 opacity-60 text-sm">Blends heritage aesthetics with cutting-edge smart home integration.</p>
+          </div>
+        </div>
+      </section>
 
-      </main>
-    </div>
+      <!-- Services -->
+      <section class="py-20 px-8 md:px-24 border-t border-[#D4AF37]/10">
+        <h2 id="services-label" class="text-sm uppercase tracking-widest opacity-60 mb-12">Our Expertise</h2>
+        <div class="grid md:grid-cols-3 gap-12">
+          <div class="border border-[#D4AF37]/10 p-8 hover:border-[#D4AF37]/30 transition">
+            <h3 id="service1-title" class="text-xl font-bold mb-4">Heritage Restoration</h3>
+            <p id="service1-desc" class="opacity-60 text-sm">Preservation of historical details and structural integrity.</p>
+          </div>
+          <div class="border border-[#D4AF37]/10 p-8 hover:border-[#D4AF37]/30 transition">
+            <h3 id="service2-title" class="text-xl font-bold mb-4">Bespoke Renovation</h3>
+            <p id="service2-desc" class="opacity-60 text-sm">Luxury custom interiors and premium finishes.</p>
+          </div>
+          <div class="border border-[#D4AF37]/10 p-8 hover:border-[#D4AF37]/30 transition">
+            <h3 id="service3-title" class="text-xl font-bold mb-4">Modern Integration</h3>
+            <p id="service3-desc" class="opacity-60 text-sm">Smart systems, HVAC, lighting, and technology upgrades.</p>
+          </div>
+        </div>
+      </section>
 
-    <script>
-      const t = {
-        en: {
-          logo: "TESURIA",
-          langLabel: "HEB",
-          heroTitle: "RESTORING<br>ARCHITECTURAL LEGACIES.",
-          heroDesc: "Tesuria specializes in the meticulous renovation of heritage estates and luxury residences. Craftsmanship meets contemporary engineering.",
-          contactBtn: "Phone Call",
-          inquireText: "Inquire",
-          websiteHint: "for more to see click here (to our website)",
-          // ... all other translations ...
-        },
-        he: {
-          logo: "טסוריה",
-          langLabel: "ENG",
-          heroTitle: "משחזרים<br>מורשת ארכיטקטונית.",
-          heroDesc: "טסוריה מתמחה בשיפוץ קפדני של אחוזות היסטוריות ומגורי יוקרה. אומנות פוגשת הנדסה בת זמננו.",
-          contactBtn: "שיחת טלפון",
-          inquireText: "בירור",
-          websiteHint: "לצפייה בפרטים נוספים לחצו כאן (לאתר שלנו)",
-          // ... all other translations ...
-        }
-      };
+      <!-- Contact Form Section -->
+      <section id="contact-section" class="py-20 px-8 md:px-24 border-t border-[#D4AF37]/10">
+        <h2 id="contact-title" class="text-3xl font-bold uppercase tracking-widest mb-8">Consign Your Details</h2>
+        <p id="contact-desc" class="text-lg opacity-80 mb-12 max-w-2xl">
+          Leave your contact information below. Yossi and Rafael will personally review it and prepare a bespoke offer for your project.
+        </p>
+        <form id="contact-form" class="max-w-2xl">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+            <div>
+              <label id="label-name" class="block text-sm uppercase tracking-widest opacity-60 mb-2">Full Name</label>
+              <input type="text" required class="w-full bg-transparent border-b border-[#D4AF37]/30 focus:border-[#D4AF37] py-3 focus:outline-none text-xl" placeholder="John Doe" />
+            </div>
+            <div>
+              <label id="label-phone" class="block text-sm uppercase tracking-widest opacity-60 mb-2">Telephone</label>
+              <input type="tel" required class="w-full bg-transparent border-b border-[#D4AF37]/30 focus:border-[#D4AF37] py-3 focus:outline-none text-xl" placeholder="+972-50-000-0000" />
+            </div>
+          </div>
+          <div class="mb-12">
+            <label id="label-message" class="block text-sm uppercase tracking-widest opacity-60 mb-2">Project Description (optional)</label>
+            <textarea rows="4" class="w-full bg-transparent border border-[#D4AF37]/20 focus:border-[#D4AF37] p-6 focus:outline-none resize-none"></textarea>
+          </div>
+          <button type="submit" id="submit-btn" class="px-16 py-6 bg-[#D4AF37] text-black font-bold uppercase tracking-widest hover:bg-white transition shadow-xl">
+            Submit Request
+          </button>
+          <p id="success-msg" class="mt-8 text-lg opacity-0 transition-opacity">Thank you. We will contact you shortly with your personalized offer.</p>
+        </form>
+      </section>
 
-      let lang = 'en';
-      const app = document.getElementById('app');
+      <!-- Footer -->
+      <footer class="py-20 px-8 md:px-24 border-t border-[#D4AF37]/10 text-center md:text-left">
+        <h2 id="footer-logo" class="text-3xl font-bold tracking-widest mb-8">TESURIA</h2>
+        <div class="space-y-4 text-lg">
+          <p id="rafael-line" class="opacity-80">Rafael Tesuria: <a href="tel:+972505379800" class="underline hover:opacity-70">050-537-9800</a></p>
+          <p id="yossi-line" class="opacity-80">Yossi Tesuria: <a href="tel:+972545820425" class="underline hover:opacity-70">054-582-0425</a></p>
+          <p id="office-line" class="opacity-60 text-sm mt-8">Head Office: Ezorei Hen, Tel Aviv</p>
+          <p id="copyright" class="opacity-40 text-xs mt-12">© 2026 Tesuria Partners. All rights reserved.</p>
+        </div>
+      </footer>
+    </main>
+  </div>
 
-      document.getElementById('lang-button').addEventListener('click', () => {
-        lang = lang === 'en' ? 'he' : 'en';
-        const tr = t[lang];
+  <script>
+    const content = {
+      en: {
+        logo: "TESURIA",
+        langLabel: "HEB",
+        heroTitle: "RESTORING<br>ARCHITECTURAL<br>LEGACIES.",
+        heroDesc: "Premium heritage restoration and luxury renovations. Craftsmanship meets modern engineering.",
+        contactBtn: "Get Deal Offer",
+        websiteText: "Visit our full website",
+        principalsLabel: "The Master Builders",
+        owner1: { name: "Yossi Tesuria", role: "Lead Restoration Engineer", bio: "Master craftsman with 20 years in stonework and historical timber reinforcement." },
+        owner2: { name: "Rafael Tesuria", role: "Principal Architect", bio: "Blends heritage aesthetics with cutting-edge smart home integration." },
+        servicesLabel: "Our Expertise",
+        service1: { title: "Heritage Restoration", desc: "Preservation of historical details and structural integrity." },
+        service2: { title: "Bespoke Renovation", desc: "Luxury custom interiors and premium finishes." },
+        service3: { title: "Modern Integration", desc: "Smart systems, HVAC, lighting, and technology upgrades." },
+        contactTitle: "Consign Your Details",
+        contactDesc: "Leave your contact information below. Yossi and Rafael will personally review it and prepare a bespoke offer for your project.",
+        labelName: "Full Name",
+        labelPhone: "Telephone",
+        labelMessage: "Project Description (optional)",
+        submitBtn: "Submit Request",
+        successMsg: "Thank you. We will contact you shortly with your personalized offer.",
+        footerLogo: "TESURIA",
+        rafael: "Rafael Tesuria: ",
+        yossi: "Yossi Tesuria: ",
+        office: "Head Office: Ezorei Hen, Tel Aviv",
+        copyright: "© 2026 Tesuria Partners. All rights reserved."
+      },
+      he: {
+        logo: "טסוריה",
+        langLabel: "ENG",
+        heroTitle: "משחזרים<br>מורשת<br>ארכיטקטונית.",
+        heroDesc: "שחזור מורשת פרימיום ושיפוץ מגורי יוקרה. אומנות פוגשת הנדסה מודרנית.",
+        contactBtn: "קבל הצעת מחיר",
+        websiteText: "בקרו באתר המלא שלנו",
+        principalsLabel: "בוני המופת",
+        owner1: { name: "יוסי טסוריה", role: "מהנדס שחזור ראשי", bio: "אומן מומחה בעבודות אבן וחיזוק קורות עץ היסטוריות." },
+        owner2: { name: "רפאל טסוריה", role: "אדריכל ראשי", bio: "משלב אסתטיקה מסורתית עם מערכות בית חכם מתקדמות." },
+        servicesLabel: "המומחיות שלנו",
+        service1: { title: "שחזור מורשת", desc: "שימור קפדני של פרטים היסטוריים ומבנים." },
+        service2: { title: "שיפוץ יוקרתי", desc: "עיצוב פנים מותאם וגימורים ברמה הגבוהה." },
+        service3: { title: "שילוב מערכות מודרניות", desc: "מיזוג, תאורה וטכנולוגיה חכמה." },
+        contactTitle: "הפקדת פרטי התקשרות",
+        contactDesc: "השאירו את פרטיכם כאן. יוסי ורפאל יבחנו אותם אישית ויגבשו הצעה מותאמת לפרויקט שלכם.",
+        labelName: "שם מלא",
+        labelPhone: "טלפון",
+        labelMessage: "תיאור הפרויקט (אופציונלי)",
+        submitBtn: "שלח בקשה",
+        successMsg: "תודה רבה. נחזור אליכם בקרוב עם הצעה מותאמת אישית.",
+        footerLogo: "טסוריה",
+        rafael: "רפאל טסוריה: ",
+        yossi: "יוסי טסוריה: ",
+        office: "משרד ראשי: אזורי חן, תל אביב",
+        copyright: "© 2026 שותפי טסוריה. כל הזכויות שמורות."
+      }
+    };
 
-        app.dir = lang === 'he' ? 'rtl' : 'ltr';
-        document.documentElement.lang = lang;
+    let currentLang = 'en';
+    const app = document.getElementById('app');
 
-        document.getElementById('logo').textContent = tr.logo;
-        document.getElementById('lang-label').textContent = tr.langLabel;
-        document.getElementById('hero-title').innerHTML = tr.heroTitle;
-        document.getElementById('hero-desc').textContent = tr.heroDesc;
-        document.getElementById('contact-btn').textContent = tr.contactBtn;
-        document.getElementById('inquire-text').textContent = tr.inquireText;
-        document.getElementById('website-hint').textContent = tr.websiteHint;
+    document.getElementById('lang-btn').addEventListener('click', () => {
+      currentLang = currentLang === 'en' ? 'he' : 'en';
+      const t = content[currentLang];
 
-        // ... update all other elements as before ...
-      });
-    </script>
-  </body>
+      app.dir = currentLang === 'he' ? 'rtl' : 'ltr';
+      document.documentElement.lang = currentLang;
+
+      document.getElementById('logo').textContent = t.logo;
+      document.getElementById('lang-label').textContent = t.langLabel;
+      document.getElementById('hero-title').innerHTML = t.heroTitle;
+      document.getElementById('hero-desc').textContent = t.heroDesc;
+      document.getElementById('contact-btn').textContent = t.contactBtn;
+      document.getElementById('website-text').textContent = t.websiteText;
+      document.getElementById('principals-label').textContent = t.principalsLabel;
+      document.getElementById('owner1-name').textContent = t.owner1.name;
+      document.getElementById('owner1-role').textContent = t.owner1.role;
+      document.getElementById('owner1-bio').textContent = t.owner1.bio;
+      document.getElementById('owner2-name').textContent = t.owner2.name;
+      document.getElementById('owner2-role').textContent = t.owner2.role;
+      document.getElementById('owner2-bio').textContent = t.owner2.bio;
+      document.getElementById('services-label').textContent = t.servicesLabel;
+      document.getElementById('service1-title').textContent = t.service1.title;
+      document.getElementById('service1-desc').textContent = t.service1.desc;
+      document.getElementById('service2-title').textContent = t.service2.title;
+      document.getElementById('service2-desc').textContent = t.service2.desc;
+      document.getElementById('service3-title').textContent = t.service3.title;
+      document.getElementById('service3-desc').textContent = t.service3.desc;
+      document.getElementById('contact-title').textContent = t.contactTitle;
+      document.getElementById('contact-desc').textContent = t.contactDesc;
+      document.getElementById('label-name').textContent = t.labelName;
+      document.getElementById('label-phone').textContent = t.labelPhone;
+      document.getElementById('label-message').textContent = t.labelMessage;
+      document.getElementById('submit-btn').textContent = t.submitBtn;
+      document.getElementById('success-msg').textContent = t.successMsg;
+      document.getElementById('footer-logo').textContent = t.footerLogo;
+      document.getElementById('rafael-line').innerHTML = t.rafael + '<a href="tel:+972505379800" class="underline hover:opacity-70">050-537-9800</a>';
+      document.getElementById('yossi-line').innerHTML = t.yossi + '<a href="tel:+972545820425" class="underline hover:opacity-70">054-582-0425</a>';
+      document.getElementById('office-line').textContent = t.office;
+      document.getElementById('copyright').textContent = t.copyright;
+    });
+
+    // Simple form success message
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('success-msg').classList.remove('opacity-0');
+      this.reset();
+      setTimeout(() => document.getElementById('success-msg').classList.add('opacity-0'), 6000);
+    });
+  </script>
+</body>
 </html>
